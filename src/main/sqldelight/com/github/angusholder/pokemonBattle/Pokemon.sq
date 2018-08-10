@@ -1,0 +1,20 @@
+import com.github.angusholder.pokemonBattle.PokeType;
+
+CREATE TABLE Pokemon (
+    pokedexNum INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    type1 TEXT AS PokeType NOT NULL,
+    type2 TEXT AS PokeType,
+    baseHp INTEGER NOT NULL,
+    baseAtk INTEGER NOT NULL,
+    baseDef INTEGER NOT NULL,
+    baseSpAtk INTEGER NOT NULL,
+    baseSpDef INTEGER NOT NULL,
+    baseSpd INTEGER NOT NULL
+);
+
+findByPokedexNum:
+SELECT * FROM Pokemon WHERE pokedexNum = ?;
+
+findByName:
+SELECT * FROM Pokemon WHERE name = ?;

@@ -1,0 +1,15 @@
+import com.github.angusholder.pokemonBattle.MoveCategory;
+import com.github.angusholder.pokemonBattle.PokeType;
+
+
+CREATE TABLE Move (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    type TEXT AS PokeType NOT NULL,
+    power INTEGER NOT NULL,
+    accuracy INTEGER,
+    category TEXT AS MoveCategory NOT NULL
+);
+
+findByName:
+SELECT * FROM Move WHERE name = ?;
